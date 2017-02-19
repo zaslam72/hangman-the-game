@@ -14,13 +14,8 @@ class GamesController < ApplicationController
     else 
       @game = Game.new(word: get_word(params[:difficulty]), guesses: "")
     end 
-    @game.user_word = "_" * @game.word.length
-
-    if @game.save
-        redirect_to game_path(@game)
-    else 
-      render 'new'
-    end 
+    redirect_to game_path(@game) if @game.save
+    # raise error -- maybe show 404 page
   end 
 
 
@@ -29,14 +24,14 @@ class GamesController < ApplicationController
 
 
   def update
-    check_letter(params[:letter], @game)
+    check_letter(params[:letter])
     respond_to do |format|
       format.js { render 'show' } 
       format.html {render 'show' }  
     end 
   end 
 
-
+  # destroy - this method will be called through the 'quit button'
   def destroy
     @game.destroy
     redirect_to root_path
@@ -48,25 +43,38 @@ private
     @game = Game.find(params[:id])
   end 
 
-  def check_letter(letter, game)
-    if game.word.include?(letter)
-      game.word.split("").each_with_index do |item, index|
+  def check_letter(letter)
+    if @game.word.include?(letter) # game.include_letter? (create method in game class) 
+      @game.word.split("").each_with_index do |item, index| #game.place (convert this into a private method
         if item == letter
-          game.user_word[index] = letter 
+          @game.user_word[index] = letter 
         end 
       end 
     else
-      game.guesses += letter
-      game.remaining_guesses -= 1
+      @game.append_guess(letter)
+      @game.remaining_guesses -= 1 # convert to method 
     end 
-    game.save
+    @game.save
   end 
 
+  # def check_word(word, game)
+  #   if game.word == word 
+  #     game.user_word = word 
+  #   else
+  #     game.append_guess(word) 
+  #     game.remaining_guesses -= 1 
+  #   end 
+  #   game.save
+  # end 
+
   def get_word(difficulty)
-    url = "http://linkedin-reach.hagbpyjegb.us-west-2.elasticbeanstalk.com/words?difficulty=#{difficulty}&minLength=5"
-    @response = HTTParty.get(url).split(/\n/).shuffle.sample
+    url = "http://linkedin-reach.hagbpyjegb.us-west-2.elasticbeanstalk.com/words?difficulty=#{difficulty}&minLength=b"
+    @response = HTTParty.get(url).split(/\n/).shuffle.sample # change /n/ into constant call delimiter
     p @response
     return @response
+    # if api call successful.... then do @response....
+    # else raise error 
+    # add comments about why you're doing each of these 
   end 
 
 end
