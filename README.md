@@ -1,21 +1,22 @@
 ########################################
-          GOALS FOR SATURDAY
+      GOALS FOR SUNDAY AND MONDAY
 ########################################
 
-priority features: 
-[x] implement friendship (done by 1:15pm)
-[x] implement leaderboard/scores (done by 3:30pm)
+priority:
+[ ] social media share
+[ ] create seed file
+[ ] update README.md
+[ ] fix current_user method
+[ ] clean up view pages (make sure indent is good)
 
-[ ] share on LinkedIn
-
-[ ] refactor code -- clean, clean, clean
-
-[ ] tests -- maybe start on this with model + controllers
-
+other edits:
+[ ] disbale buttons on keyboard
+[ ] fix padding on buddy table
+[ ] show difficulty level
 [ ] band-aid solution
 
-[ ] start on powerpoint
-
-
-if you have time -- or at least map it out: 
-[ ] implement dictionary API (for hint?)
+specs to finish:
+[ ] friendship model
+[ ] users controller
+[ ] sessions controller
+[ ] games controller

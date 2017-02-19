@@ -3,6 +3,8 @@ class GamesController < ApplicationController
   after_action :add_win_count, only: [:update]
   after_action :add_lose_count, only: [:update]
 
+# delimiter constant for API call 
+# called in get_word method below 
   DELIMITER = "\n"
 
 # get method for new game

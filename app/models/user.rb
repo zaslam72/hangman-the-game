@@ -24,7 +24,6 @@ class User < ApplicationRecord
 # called from application_controller by games_controller
 # calls increment games_played method below
   def increment_loss
-    # increment loss 
     self.games_lost += 1
     increment_games_played
   end
