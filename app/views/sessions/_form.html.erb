@@ -1,0 +1,31 @@
+<div class="login user-form">
+  <center><h2 class="ui headers">Log In</h2></center>
+
+    <%= form_tag('/login', {class: "ui form"}) do %>
+
+      <% if @errors %>
+        <ul>
+        <% @errors.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+        </ul>
+      <% end %>
+
+      <div class="field">
+        <label>Username</label>
+        <%= text_field_tag :username, nil, placeholder: "Username" %>
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <%= password_field_tag :password, nil, placeholder: "Password" %>
+      </div>
+
+      <center><%= submit_tag "Submit", class: "ui red button" %></center>
+
+    <% end %>
+  <center>Not a member? <%= link_to "Sign Up", signup_path, remote: true %></center>
+</div>
+
+
+

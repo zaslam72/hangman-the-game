@@ -1,0 +1,17 @@
+<div class="front-page ui container center raised segments">
+  <div class="ui horizontal container segments">
+    <div class="ui container segment" >
+      <%= render 'rule' %><br>
+      <%= render 'difficulty' %><br>
+    </div>
+    <div class="ui container segment">
+      <% if current_user %>
+        <%= render 'navigation' %>
+      <% else %>
+        <%= render 'sessions/form' %>
+        <div class="form-here">
+        </div><br>
+      <% end %>
+    </div>
+  </div>
+</div>

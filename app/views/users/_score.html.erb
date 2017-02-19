@@ -1,0 +1,21 @@
+<div class="score ui segment">
+
+  <div class="scoreboard-header">
+    <h2 class="ui headers">Scoreboard</h2>
+  </div>
+
+  <div class="won">
+    <li><b>Games won:</b> <%= @user.games_won.to_i %></li>
+  </div>
+
+  <div class="lost">
+    <li><b>Games lost:</b> <%= @user.games_lost %></li>
+  </div>
+
+  <div class="played">
+    <li><b>Games played:</b> <%= @user.games_played %></li>
+  </div>
+
+  <br><%= button_to 'See how you compare', users_path, method: :get, class: "ui red button" %>
+
+</div>

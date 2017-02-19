@@ -1,0 +1,15 @@
+<div class="ui segment padding">
+  <h2 class="ui header">Remaining Incorrect Guesses:</h2>
+    <div class="medium-font">
+      <%= @game.remaining_guesses %>
+    </div>
+</div>
+
+<div class="ui segment">
+  <h2 class="ui header">Incorrect Guesses:</h2>
+  <div class="spacing">
+    <%= @game.guesses %>
+  </div>
+</div>
+
+<%= render 'button' %>

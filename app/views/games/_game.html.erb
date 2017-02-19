@@ -1,0 +1,33 @@
+<% if @game.user_word == @game.word %>
+  <div class="ui container segment">
+    <center><%= render 'word' %></center>
+    <center><%= render 'winner' %></center>
+    <center><%= render 'button' %></center>
+  </div>
+<% elsif @game.remaining_guesses <= 0 %>
+  <div class="ui container segment">
+    <center><%= render 'loser' %></center>
+    <center><%= image_tag("deadman.png", :alt => "hangman", height: '200px', width: '150px') %></center>
+    <br><br>
+    <center><h2 class="ui header">The correct word was:</h2></center>
+    <center><%= render 'word' %></center>
+    <center><%= render 'button' %></center>
+  </div>
+<% else %>
+  <div class="ui container segments">
+    <div class="ui container segment">
+      <center><%= render 'word' %></center>
+    </div>
+    <div class="ui horizontal container segments">
+      <div class="ui container segment">
+        <center><%= render 'keyboard' %></center>
+      </div>
+      <div class="ui container segment">
+        <center><%= render 'hangman' %></center>
+      </div>
+      <div class="ui container segment">
+        <center><%= render 'incorrect' %></center>
+      </div>
+    </div>
+  </div>
+<% end %>

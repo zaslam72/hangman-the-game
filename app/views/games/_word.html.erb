@@ -1,0 +1,7 @@
+<h1 class="huge-font spacing">
+  <% if winner? || loser? %>
+    <%= @game.word %>
+  <% else %>
+    <%= @game.user_word %>
+  <% end %>
+</h1>

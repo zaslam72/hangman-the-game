@@ -1,0 +1,38 @@
+<div class="keyboard">
+  <h2 class="ui header">Choose a letter:</h2>
+
+  <div class="letter ui buttons">
+    <%= button_to 'A', game_path(@game), class: "letter ui button", remote: true, params: { letter: "a" }, method: :put %>
+    <%= button_to 'B', game_path(@game), class: "letter ui button", remote: true, params: { letter: "b" }, method: :put %>
+    <%= button_to 'C', game_path(@game), class: "letter ui button", remote: true, params: { letter: "c" }, method: :put %>
+    <%= button_to 'D', game_path(@game), class: "letter ui button", remote: true, params: { letter: "d" }, method: :put %>
+    <%= button_to 'E', game_path(@game), class: "letter ui button", remote: true, params: { letter: "e" }, method: :put %>
+    <%= button_to 'F', game_path(@game), class: "letter ui button", remote: true, params: { letter: "f" }, method: :put %>
+    <%= button_to 'G', game_path(@game), class: "letter ui button", remote: true, params: { letter: "g" }, method: :put %>
+  </div><br><br>
+  <div class="letter ui buttons">
+    <%= button_to 'H', game_path(@game), class: "letter ui button", remote: true, params: { letter: "h" }, method: :put %>
+    <%= button_to 'I', game_path(@game), class: "letter ui button", remote: true, params: { letter: "i" }, method: :put %>
+    <%= button_to 'J', game_path(@game), class: "letter ui button", remote: true, params: { letter: "j" }, method: :put %>
+    <%= button_to 'K', game_path(@game), class: "letter ui button", remote: true, params: { letter: "k" }, method: :put %>
+    <%= button_to 'L', game_path(@game), class: "letter ui button", remote: true, params: { letter: "l" }, method: :put %>
+    <%= button_to 'M', game_path(@game), class: "letter ui button", remote: true, params: { letter: "m" }, method: :put %>
+    <%= button_to 'N', game_path(@game), class: "letter ui button", remote: true, params: { letter: "n" }, method: :put %>
+  </div><br><br>
+  <div class="letter ui buttons">
+    <%= button_to 'O', game_path(@game), class: "letter ui button", remote: true, params: { letter: "o" }, method: :put %>
+    <%= button_to 'P', game_path(@game), class: "letter ui button", remote: true, params: { letter: "p" }, method: :put %>
+    <%= button_to 'Q', game_path(@game), class: "letter ui button", remote: true, params: { letter: "q" }, method: :put %>
+    <%= button_to 'R', game_path(@game), class: "letter ui button", remote: true, params: { letter: "r" }, method: :put %>
+    <%= button_to 'S', game_path(@game), class: "letter ui button", remote: true, params: { letter: "s" }, method: :put %>
+    <%= button_to 'T', game_path(@game), class: "letter ui button", remote: true, params: { letter: "t" }, method: :put %>
+    <%= button_to 'U', game_path(@game), class: "letter ui button", remote: true, params: { letter: "u" }, method: :put %>
+  </div><br><br>
+  <div class="letter ui buttons">
+    <%= button_to 'V', game_path(@game), class: "letter ui button", remote: true, params: { letter: "v" }, method: :put %>
+    <%= button_to 'W', game_path(@game), class: "letter ui button", remote: true, params: { letter: "w" }, method: :put %>
+    <%= button_to 'X', game_path(@game), class: "letter ui button", remote: true, params: { letter: "x" }, method: :put %>
+    <%= button_to 'Y', game_path(@game), class: "letter ui button", remote: true, params: { letter: "y" }, method: :put %>
+    <%= button_to 'Z', game_path(@game), class: "letter ui button", remote: true, params: { letter: "z" }, method: :put %>
+  </div>
+</div>

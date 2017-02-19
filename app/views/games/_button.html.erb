@@ -1,0 +1,7 @@
+<div>
+  <% if winner? || loser? %>
+    <%= button_to 'Play Again', root_path, method: :get, class: "ui red button"%>
+  <% else %>
+    <%= button_to 'Quit Game', game_path(@game), class: "ui red button", method: :delete, data: {confirm: "Are you sure?"} %>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="nav-buttons">
+  <center>
+  <h2 class="ui headers">Explore</h2>
+    <div class="profile-page">
+      <%= button_to "#{current_user.name}'s Profile", user_path(current_user), class: "ui red button", method: :get %>
+    </div><br>
+
+    <div class="leader-board">
+      <%= button_to "Leader Board", users_path, class: "ui red button", method: :get %>
+    </div><br>
+
+    <div class="logout">
+      <%= button_to 'Log Out', logout_path, class: "ui red button", method: :get %>
+    </div>
+  </center>
+</div>

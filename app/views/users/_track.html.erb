@@ -1,0 +1,28 @@
+<div class="tracker">
+  <h2 class="ui headers">Check out our top players: </h2>
+  <table class="ui striped table">
+    <thead class="center aligned">
+      <tr>
+        <th>Rank</th>
+        <th>Username</th>
+        <th>Win Rate</th>
+        <th>Games Won</th>
+        <th>Games Played</th>
+      </tr>
+    </thead>
+
+    <tbody class="center aligned">
+    <% count = 1 %>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= count %></td>
+        <td><%= link_to user.username, user_path(user) %></td>
+        <td><%= (user.games_won.to_f / user.games_played * 100).to_i %>%</td>
+        <td><%= user.games_won.to_i %></td>
+        <td><%= user.games_played %></td>
+        <% count +=1 %>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

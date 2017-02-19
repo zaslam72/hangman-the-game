@@ -1,0 +1,21 @@
+<div class="ui container segments">
+  <div class="ui segment">
+    <% if current_user == @user %>
+      <center><%= render 'welcome' %></center><br>
+      <center><%= render 'playbutton' %></center>
+    <% else %>
+      <center><%= render 'profilename' %>
+    <% end %>
+  </div>
+  <div class="ui horizontal container segments">
+    <div class="ui segment">
+      <%= render 'score' %>
+    </div>
+    <div class="ui segment">
+      <%= render 'connection' %>
+    </div>
+  </div>
+</div>
+
+
+
