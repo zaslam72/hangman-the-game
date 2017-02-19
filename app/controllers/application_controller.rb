@@ -1,20 +1,27 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+# this method will check to see if there's a current_user present
+# returns user object 
   def current_user # change current_user to get_current_user 
     current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+# this method will check to see if the user has won the game
+# returns true or false
   def winner?
-    @game.user_word == @game.word # move these to game model 
+    @game.win
   end 
 
+# this method will check to see if the user has lost the game
+# returns true or false 
   def loser?
-    @game.remaining_guesses == 0 # move to game model 
+    @game.lose
   end 
 
-  # add comments to explain && 
-
+# this method checks to see if there's a current user & a winner
+# this method will increment the games_won && games_played count for existing, logged in users
+# it will save the current_user object without going through validations
   def add_win_count
     if winner? && current_user
       @current_user = current_user
@@ -23,6 +30,9 @@ class ApplicationController < ActionController::Base
     end 
   end 
 
+# this method checks to see if there's a current user & a loser
+# this method will increment the games_won && games_played count for existing, logged in users
+# it will save the current_user object without going through validations
   def add_lose_count
     if loser? && current_user
       @current_user = current_user
@@ -31,7 +41,12 @@ class ApplicationController < ActionController::Base
     end 
   end 
 
+# this method will raise an error if not found 
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
 
+# set helper methods
   helper_method :current_user, :winner?, :loser?, :add_win_count, :add_lose_count
   
 end
