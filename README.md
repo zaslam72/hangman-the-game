@@ -4,12 +4,17 @@
 
 priority:
 
-[ ] social media share
-[ ] update README.md
-[ ] fix current_user method
-[ ] disbale buttons on keyboard
-[ ] fix padding on buddy table
-[ ] show difficulty level
+- update README.md
+- show difficulty level
+
+
+- social media share
+
+
+monday: 
+
+- fix current_user method
+- disable buttons on keyboard
 
 specs to finish:
 

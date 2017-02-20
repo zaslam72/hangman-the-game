@@ -1,50 +1,15 @@
-<table>
-  <tr>
-    <td>
-      <% if @game.remaining_guesses <= 5 %>
-        <%= image_tag("hangman1.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% else %>
-        <%= image_tag("grayman1.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% end %>
-    </td>
-    <td>
-      <% if @game.remaining_guesses <= 4 %>
-        <%= image_tag("hangman2.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% else %>
-        <%= image_tag("grayman2.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% end %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <% if @game.remaining_guesses <= 3 %>
-        <%= image_tag("hangman3.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% else %>
-        <%= image_tag("grayman3.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% end %>
-    </td>
-    <td>
-      <% if @game.remaining_guesses <= 2 %>
-        <%= image_tag("hangman4.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% else %>
-        <%= image_tag("grayman4.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% end %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <% if @game.remaining_guesses <= 1 %>
-        <%= image_tag("hangman5.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% else %>
-        <%= image_tag("grayman5.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% end %>
-    </td>
-    <td>
-      <% if @game.remaining_guesses <= 0 %>
-        <%= image_tag("hangman6.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% else %>
-        <%= image_tag("grayman6.png", :alt => "hangman", height: '60px', width: '60px') %>
-      <% end %>
-    </td>
-  </tr>
-</table>
+<% if @game.remaining_guesses == 5 %>
+  <%= image_tag("stickfigure1.png", :alt => "hangman", height: '200px', width: '75px') %>
+<% elsif @game.remaining_guesses == 4 %>
+  <%= image_tag("stickfigure2.png", :alt => "hangman", height: '200px', width: '75px') %>
+<% elsif @game.remaining_guesses == 3 %>
+  <%= image_tag("stickfigure3.png", :alt => "hangman", height: '200px', width: '75px') %>
+<% elsif @game.remaining_guesses == 2 %>
+  <%= image_tag("stickfigure4.png", :alt => "hangman", height: '200px', width: '75px') %>
+<% elsif @game.remaining_guesses == 1 %>
+  <%= image_tag("stickfigure5.png", :alt => "hangman", height: '200px', width: '75px') %>
+<% elsif @game.remaining_guesses == 0 %>
+  <%= image_tag("stickfigure6.png", :alt => "hangman", height: '200px', width: '75px') %>
+<% else %>
+  <%= image_tag("blankstick.png", :alt => "hangman", height: '200px', width: '75px') %>
+<% end %>
