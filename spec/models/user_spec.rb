@@ -2,11 +2,10 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do 
   
-  let(:user) { User.create(name: "Zara", username: "zarazara", password: "password", password_confirmation: "password") }
-  let(:user2) { User.create(username: "joejoe", password: "password", password_confirmation: "password") }
-  let(:user3) { User.create(name: "Joe", password: "password", password_confirmation: "password") }
+  let(:user) { User.create(name: "Zara", username: "zarazara", password: "password") }
+  let(:user2) { User.create(username: "joejoe", password: "password") }
+  let(:user3) { User.create(name: "Joe", password: "password") }
   let(:user4) { User.create(name: "Joe", username: "joejoe") }
-  let(:user5) { User.create(name: "Jess", username: "jessjess", password: "password", password_confirmation: "password") }
 
   let(:game) { Game.create(word: "sandwich", user_id: user.id) }
 

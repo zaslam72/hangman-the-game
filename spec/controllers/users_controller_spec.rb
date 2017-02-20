@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe UsersController do 
-  let!(:user) { User.create!(name: "Zara", username: "zarazara", password: "password", password_confirmation: "password", games_played: 10) }
-  # let!(:game) { Game.create!(word: "sandwich", user_id: user.id) }
+  let!(:user) { User.create!(name: "Zara", username: "zarazara", password: "password", games_played: 10) }
+  let!(:game) { Game.create!(word: "sandwich", user_id: user.id) }
 
   describe "GET #users" do
     it "responds with status code 200" do 
@@ -79,40 +79,6 @@ describe UsersController do
         post :create, { user: { username: "zarazara", password: "password", password_confirmation: "password" } }
         expect(response).to render_template(:new)
       end 
-
     end 
-
   end 
-
-
 end 
-
-
-
-
-
-  # describe "GET #show" do
-
-  #   it "responds with status code 200" do 
-  #     get :show, { id: user.id }
-  #     expect(response).to have_http_status 200
-  #   end 
-
-  #   it "assigns all the users games to @games" do 
-  #     get :show, { id: user.id }
-  #     expect(assigns(:games)).to match_array ([game])
-  #   end 
-
-  #   it "renders the :show template" do 
-  #     get :show, { id: user.id }
-  #     expect(response).to render_template(:show)
-  #   end 
-  # end 
-
-
-
-
-
-  # def show
-  #   @games = @current_user.games
-  # end 

@@ -2,8 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Game, type: :model do 
   
-  let(:user) { User.create(name: "Zara", username: "zarazara", password: "password", password_confirmation: "password") }
+  let(:user) { User.create(name: "Zara", username: "zarazara", password: "password") }
   let(:game) { Game.create(word: "sandwich", guesses: "bqx", user_word: "________", user_id: user.id) }
+  let(:game2) { Game.create(guesses: "bqx", user_word: "________", user_id: user.id) }
+
 
   describe "game attributes" do 
 
@@ -21,6 +23,10 @@ RSpec.describe Game, type: :model do
 
     it "belongs to a user" do 
       expect(game.user).to eq user
+    end 
+
+    it "validates the presence of word" do 
+      expect(game2.id).to eq nil 
     end 
 
   end 
