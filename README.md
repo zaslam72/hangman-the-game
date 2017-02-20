@@ -46,7 +46,7 @@
 - **Difficulty Level:** User can select a difficulty level based off how lucky they're feeling or how skilled they're are. Difficulty levels include easy, medium, hard, and surprise me.
 - **Leaderboard:** Members who have played at least one game are automatically added to the leaderboard. The board shows the top users by their win rates (games won / games played).
 - **Friendship:** Members can connect with other members via a friendship. This makes it easier for users to track how their friends are doing without skimming through the leaderboard. 
-- **Bandaids:** Members are given three bandaids when they sign up. They can use these bandaids as lifelines to restore one body part in the middle of the game 
+- **First Aid:** Members are given three bandaids when they sign up. They can use these bandaids as lifelines to restore one body part in the middle of the game 
 - **Hangman Display:** Users can see the physical hangman diagram as they guess incorrectly 
 - **Quit Button:** Users can quit in the middle of the game if they choose 
 - **Share Buttons:** If a user wins a game, they can showcase their awesomeness by sharing a Tweet or a LinkedIn post. 
