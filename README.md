@@ -2,19 +2,18 @@
       GOALS FOR SUNDAY AND MONDAY
 ########################################
 
-priority:
-
+priority: 
 - update README.md
+
+other:  
 - show difficulty level
-
-
-- social media share
-
-
-monday: 
-
 - fix current_user method
 - disable buttons on keyboard
+
+
+
+
+
 
 specs to finish:
 
