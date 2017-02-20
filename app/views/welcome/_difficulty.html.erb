@@ -1,5 +1,6 @@
 <div class="difficulty-level">
-  <center><h2 class="ui header">Click a difficulty level to begin a game</h2>
+  <center>
+  <h2 class="ui header">Click a difficulty level to begin a game</h2>
 
   <table>
     <tr>
@@ -8,5 +9,6 @@
       <td><%= button_to 'Hard', games_path, class: "difficulty ui red button", params: { difficulty: rand(8..10).to_s } %></td>
       <td><%= button_to 'Surprise Me', games_path, class: "difficulty ui red button", params: { difficulty: rand(1..10).to_s }%></td>
     </tr>
-  </table></center>
+  </table>
+  </center>
 </div>

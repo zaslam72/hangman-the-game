@@ -12,7 +12,6 @@ class GamesController < ApplicationController
     @game = Game.new
   end 
 
-
 # post method for creation of game 
 # this method will check to see if there's a current user and create a game with the user association
 # if no current user, then it will create a game without user association 
@@ -62,7 +61,6 @@ class GamesController < ApplicationController
     @game.save(validate: false)
     redirect_to game_path(@game)
   end 
-
 
 private
 
