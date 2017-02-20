@@ -51,8 +51,28 @@
 - **Quit Button:** Users can quit in the middle of the game if they choose 
 - **Share Buttons:** If a user wins a game, they can showcase their awesomeness by sharing a Tweet or a LinkedIn post. 
 - **Spotify:** Who doesn't love to listen to upbeat music as they play word games? Spotify users have the capability to listen to music as they play 
+- **Tests:** I wanted to practice test-driven development, so I implemented tests to check my models and routes before adding functionality to my controllers. I also wrote a few controller tests for additional testing practice. 
 
 
+### Workflow: 
+- I used an agile development approach when solving this problem 
+- I read the instructions and mapped out all the information I was given 
+- I decided early which tech stack I wanted to use
+- I mapped out what information my database would need to store along with what models, views, and controllers I would need
+- I created an outline of what my MVP would look like along with any additional features I wanted to add 
+- I pseudocoded the algorithm of the actual hangman game
+- I set up my associations and my routes and began testing
+- I implemented one feature at a time before I moved on to the next
+- I created a seeds file and deployed to Heroku
+
+### Code Structure: 
+- I used the MVC model 
+- **Models**
+ - I have three models: user, game, friendship
+ - My 
+- My Users controller handles the displayment of the leaderboard, creating new users, assigning sessions id, creating friendships, and destroying friendships 
+- My Games controller handles the creation of a new game, updating each game when a user selects a letter, and deleting the game if one decides to leave mid-way 
+- My Sessions controller handles loggin in and assigning sessions id 
 
 
 *****DOCUMENT YOUR THOUGHT PROCESS AND/OR CODE STRUCTURE*******
