@@ -1,20 +1,42 @@
-Hangman
+# Hangman
 
-Summary: 
-This is a web application in which the computer challenges the users to guess the word of its choice. The user is allotted six incorrect guesses before the computer wins. If the user guesses the word, the user wins.
+[Hangman](https://linkedin-hangman.herokuapp.com) is a web application in which the computer challenges the users to guess the word of its choice. The user is allotted six incorrect guesses before the computer wins. If the user guesses the word, the user wins.If you're eager to check out some of the functionality but don't want to start with a blank account, feel free to use the *following*:<br>
+- **username:** zarazara<br>
+- **password:** password
+
+### Built Using:  
+1. **Framework/Back-End:** Ruby on Rails 
+2. **Front-End:** HTML, CSS, Semantic UI framework 
+3. **Database:** PostgreSQL
+4. **Deployment:** Heroku
+
+### Launch the web application: 
+1. Clone it via GitHub: https://github.com/zaslam72/linkedinhang 
+    ``` 
+    git clone https://github.com/zaslam72/linkedinhang.git 
+    ```
+    ..-Follow the instructions installation steps below
+2. Zipped Folder
 
 
-Built Using:  
-- Framework/Back-End: Ruby on Rails 
-- Front-End: HTML, CSS, Semantic UI framework 
-- Database: PostgreSQL
+ ..- cd into the repository
+ ..- install all dependencies
+ ```
+ bundle install
+ ```
+ ..- open a server 
+ ```
+ rails server 
+ ```
+ ..- open the local port specified (most likely localhost:3000) 
+ 
 
-Launch the web application: 
-(1) Check it out on Heroku: https://linkedin-hangman.herokuapp.com
+
+1.  Check it out on Heroku: https://linkedin-hangman.herokuapp.com
 (2) Clone it via GitHub: https://github.com/zaslam72/linkedinhang
     - git clone https://github.com/zaslam72/linkedinhang.git
     - follow instructions below 
-(3) Zipped file directions: 
+(3) 
     - cd into the repository 
     - bundle install 
     - rails s or rails server
