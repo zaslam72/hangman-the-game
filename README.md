@@ -76,7 +76,7 @@
 - **Controllers**
  - My **users** controller handles the displayment of the leaderboard, creating new users, assigning sessions id, creating friendships, and destroying friendships 
  - My **games** controller handles the creation of a new game, updating each game when a user selects a letter, and deleting the game if one decides to leave mid-way 
- - My **sessions** controller handles loggin in and assigning sessions id 
+ - My **sessions** controller handles loggin in, logging out, and assigning sessions id 
 
 I also have very detailed comments about every method in my application. Feel free to dig through!<br>
 I hope you enjoy the game! Please feel free to leave feedback. 
