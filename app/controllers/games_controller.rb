@@ -18,9 +18,9 @@ class GamesController < ApplicationController
 # redirects to game show if the game saves 
   def create
     if current_user
-      @game = current_user.games.new(word: get_word(params[:difficulty]), guesses: "")
+      @game = current_user.games.new(word: get_word(params[:difficulty]), guesses: "", difficulty: params[:difficulty])
     else 
-      @game = Game.new(word: get_word(params[:difficulty]), guesses: "")
+      @game = Game.new(word: get_word(params[:difficulty]), guesses: "", difficulty: params[:difficulty])
     end 
     # redirect_to game_path(@game) if @game.save
     if @game.save 

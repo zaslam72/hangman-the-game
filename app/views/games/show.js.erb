@@ -1,2 +1,7 @@
 $(".entire-game").hide()
 $(".updated-game").html("<%= j render 'game' %>")
+
+
+ $(".letter.ui.button").click(function(){ 
+    $(this).addClass("disabled"); 
+});

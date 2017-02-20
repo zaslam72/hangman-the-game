@@ -1,0 +1,10 @@
+<h2 class="ui headers">Difficulty level: 
+<% if @game.difficulty <= 3 %>
+  <span class="red">Easy</span>
+<% elsif @game.difficulty >= 8 %>
+  <span class="red">Hard</span>
+<% else %>
+  <span class="red">Medium</span>
+<% end %>
+
+</h2>
