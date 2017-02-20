@@ -11,13 +11,13 @@
 4. **Deployment:** Heroku
 
 ### Launch the web application: 
-1. Clone it via GitHub: https://github.com/zaslam72/linkedinhang 
+1. **Clone it via [GitHub](https://github.com/zaslam72/linkedinhang):**
     ``` 
     git clone https://github.com/zaslam72/linkedinhang.git 
     ```
   - Follow the instructions installation steps below
     
-2. Zipped Folder
+2. **Zipped Folder**
   - cd into the repository
   - install all dependencies
  ```
@@ -29,7 +29,7 @@
  ```
  - open the local port specified (most likely localhost:3000) 
 
-3. Check it out on [Heroku](https://linkedin-hangman.herokuapp.com)
+3. **Check it out on [Heroku](https://linkedin-hangman.herokuapp.com)**
 
 
 ### Minimum Viable Product (MVP): 
