@@ -66,18 +66,17 @@
 - I created a seeds file and deployed to Heroku
 
 ### Code Structure: 
-- I used the MVC model in planning out of my solution 
 - **Models**
  - I have three models: user, game, friendship
  - My **User** model sets the bcrypt method "has secure password", the association between games and friendships, and the validations needed upon sign up. There are also a few public methods that involve manipulating User object data that is called from the controllers. 
  - My **Game** model sets the association to users and the validations needed to create a game. There are also a few public methods that involve manipulating Game object data that is called from the controllers. 
  - My **Friendship** model sets the association to users. It practices self-referential associations. 
+- **Views**
+ - To make my code look cleaner and implement DRY, I created my view pages using partials. 
 - **Controllers**
  - My **users** controller handles the displayment of the leaderboard, creating new users, assigning sessions id, creating friendships, and destroying friendships 
  - My **games** controller handles the creation of a new game, updating each game when a user selects a letter, and deleting the game if one decides to leave mid-way 
  - My **sessions** controller handles loggin in and assigning sessions id 
-- **Views**
- - To make my code look cleaner and implement DRY, I created my view pages using partials. 
-- I also have very detailed comments about every method in my application. Feel free to dig through! 
 
+I also have very detailed comments about every method in my application. Feel free to dig through!<br>
 I hope you enjoy the game! Please feel free to leave feedback. 
