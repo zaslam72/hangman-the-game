@@ -15,20 +15,19 @@
     ``` 
     git clone https://github.com/zaslam72/linkedinhang.git 
     ```
-    ..-Follow the instructions installation steps below
+  -Follow the instructions installation steps below
+    
 2. Zipped Folder
-
-
- ..- cd into the repository
- ..- install all dependencies
+  - cd into the repository
+  - install all dependencies
  ```
  bundle install
  ```
- ..- open a server 
+ - open a server 
  ```
  rails server 
  ```
- ..- open the local port specified (most likely localhost:3000) 
+ - open the local port specified (most likely localhost:3000) 
  
 
 
