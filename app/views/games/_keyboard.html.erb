@@ -1,6 +1,5 @@
 <div class="keyboard">
   <h2 class="ui header">Choose a letter:</h2>
-
   <div class="letter ui buttons">
     <%= button_to 'A', game_path(@game), class: "letter ui button", remote: true, params: { letter: "a" }, method: :put %>
     <%= button_to 'B', game_path(@game), class: "letter ui button", remote: true, params: { letter: "b" }, method: :put %>

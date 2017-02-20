@@ -1,14 +1,13 @@
-<h2 class="ui headers">Buddy:</h2>
 <table>
   <tr>
-    <td class="square">
+    <td>
       <% if @game.remaining_guesses <= 5 %>
         <%= image_tag("hangman1.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% else %>
         <%= image_tag("grayman1.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% end %>
     </td>
-    <td class="square">
+    <td>
       <% if @game.remaining_guesses <= 4 %>
         <%= image_tag("hangman2.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% else %>
@@ -17,14 +16,14 @@
     </td>
   </tr>
   <tr>
-    <td class="square">
+    <td>
       <% if @game.remaining_guesses <= 3 %>
         <%= image_tag("hangman3.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% else %>
         <%= image_tag("grayman3.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% end %>
     </td>
-    <td class="square">
+    <td>
       <% if @game.remaining_guesses <= 2 %>
         <%= image_tag("hangman4.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% else %>
@@ -33,14 +32,14 @@
     </td>
   </tr>
   <tr>
-    <td class="square">
+    <td>
       <% if @game.remaining_guesses <= 1 %>
         <%= image_tag("hangman5.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% else %>
         <%= image_tag("grayman5.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% end %>
     </td>
-    <td class="square">
+    <td>
       <% if @game.remaining_guesses <= 0 %>
         <%= image_tag("hangman6.png", :alt => "hangman", height: '60px', width: '60px') %>
       <% else %>

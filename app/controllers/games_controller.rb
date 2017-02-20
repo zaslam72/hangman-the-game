@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, only: [:show, :edit, :update, :destroy, :bandaid]
   after_action :add_win_count, only: [:update]
   after_action :add_lose_count, only: [:update]
 
@@ -51,6 +51,18 @@ class GamesController < ApplicationController
     @game.destroy
     redirect_to root_path
   end 
+
+# this method will restore a lifeline for the user if clicked
+# decreases bandaid count by one and increases guesses count by one 
+  def bandaid
+    @user = current_user
+    @user.decrement_bandaid
+    @user.save(validate: false)
+    @game.increment_remaining_guess
+    @game.save(validate: false)
+    redirect_to game_path(@game)
+  end 
+
 
 private
 

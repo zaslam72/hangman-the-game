@@ -34,4 +34,10 @@ class User < ApplicationRecord
     self.games_played += 1
   end 
 
+# method to decrement bandaid count by one
+# called in the bandaid action in games controller 
+  def decrement_bandaid
+    self.bandaids -= 1
+  end 
+
 end

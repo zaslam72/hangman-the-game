@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   # friendship route -- added method
   post '/users/:id/friendship' => 'users#friendship'
 
+  # bandaid route -- added method
+  post '/games/:id/bandaid' => 'games#bandaid'
+
 end

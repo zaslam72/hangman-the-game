@@ -48,6 +48,12 @@ class Game < ApplicationRecord
     self.remaining_guesses -= 1 
   end 
 
+# increases the remaining_guesses count by one
+# called by bandaid action in games_controller 
+  def increment_remaining_guess
+    self.remaining_guesses += 1
+  end 
+
  private
 
 # this is a private method that is called before a game object is created (see before_create above)

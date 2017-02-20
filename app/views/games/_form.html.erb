@@ -1,5 +1,4 @@
 <%= form_for @game do |f|  %>
-
   <% if @errors %>
     <ul>
     <% @errors.full_messages.each do |error| %>
@@ -8,10 +7,8 @@
     </ul>
   <% end %>
 
-<b>Guess a letter:</b> <br>
+  <b>Guess a letter:</b><br>
 
-<%= f.text_field :letter %>
+  <%= f.text_field :letter %>
   <%= f.submit "Submit" %>
-
 <% end %>
-<br><br>
