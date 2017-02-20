@@ -43,25 +43,25 @@
     - open the local port specified (most likely localhost:3000)
 
 
-Minimum Viable Product (MVP): 
-- Getting the word: Computer pings the LinkedIn API for the word 
-- Displaying the secret word: The length of the secret word is displayed via underscores to the user
-- Selection of letter: The user can select a letter to guess 
-- Correct Selection: The user will see the letter placed in its correct spot(s) in the word 
-- Incorrect Selection: The letter will be placed in a separate box and the remaining guesses count will decrease by 1
-- User lost: User can make six incorrect guesses before the computer wins
-- User won: The user guessed all the letters in the secret word before the six chances are up
+### Minimum Viable Product (MVP): 
+- **Getting the word:** Computer pings the LinkedIn API for the word 
+- **Displaying the secret word:** Length of the secret word is displayed via underscores to the user
+- **Selection of letter:** User can select a letter to guess 
+- **Correct Selection:** User will see the letter placed in its correct spot(s) in the word 
+- **Incorrect Selection:** Letter will be placed in a separate box and the remaining guesses count will decrease by 1
+- **User lost:** User can make six incorrect guesses before the computer wins
+- **User won:** User guessed all the letters in the secret word before the six chances are up
 
 
-Going beyond the MVP: 
-- Difficulty Level: User can select a difficulty level based off how lucky they're feeling or how skilled they're are. Difficulty levels include easy, medium, hard, and surprise me.
-- Leaderboard: Members who have played at least one game are automatically added to the leaderboard. The board shows the top users by their win rates (games won / games played).
-- Friendship: Members can connect with other members via a friendship. This makes it easier for users to track how their friends are doing without skimming through the leaderboard. 
-- Bandaids: Members are given three bandaids when they sign up. They can use these bandaids as lifelines to restore one body part in the middle of the game 
-- Hangman Display: Users can see the physical hangman diagram as they guess incorrectly 
-- Quit Button: Users can quit in the middle of the game if they choose 
-- Share Buttons: If a user wins a game, they can showcase their awesomeness by sharing a Tweet or a LinkedIn post. 
-- Spotify: Who doesn't love to listen to upbeat music as they play word games? Spotify users have the capability to listen to music as they play 
+### Going beyond the MVP: 
+- **Difficulty Level:** User can select a difficulty level based off how lucky they're feeling or how skilled they're are. Difficulty levels include easy, medium, hard, and surprise me.
+- **Leaderboard:** Members who have played at least one game are automatically added to the leaderboard. The board shows the top users by their win rates (games won / games played).
+- **Friendship:** Members can connect with other members via a friendship. This makes it easier for users to track how their friends are doing without skimming through the leaderboard. 
+- **Bandaids:** Members are given three bandaids when they sign up. They can use these bandaids as lifelines to restore one body part in the middle of the game 
+- **Hangman Display:** Users can see the physical hangman diagram as they guess incorrectly 
+- **Quit Button:** Users can quit in the middle of the game if they choose 
+- **Share Buttons:** If a user wins a game, they can showcase their awesomeness by sharing a Tweet or a LinkedIn post. 
+- **Spotify:** Who doesn't love to listen to upbeat music as they play word games? Spotify users have the capability to listen to music as they play 
 
 
 
