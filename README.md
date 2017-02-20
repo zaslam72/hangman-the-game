@@ -15,7 +15,7 @@
     ``` 
     git clone https://github.com/zaslam72/linkedinhang.git 
     ```
-  -Follow the instructions installation steps below
+  - Follow the instructions installation steps below
     
 2. Zipped Folder
   - cd into the repository
@@ -28,18 +28,8 @@
  rails server 
  ```
  - open the local port specified (most likely localhost:3000) 
- 
 
-
-1.  Check it out on Heroku: https://linkedin-hangman.herokuapp.com
-(2) Clone it via GitHub: https://github.com/zaslam72/linkedinhang
-    - git clone https://github.com/zaslam72/linkedinhang.git
-    - follow instructions below 
-(3) 
-    - cd into the repository 
-    - bundle install 
-    - rails s or rails server
-    - open the local port specified (most likely localhost:3000)
+3. Check it out on [Heroku](https://linkedin-hangman.herokuapp.com)
 
 
 ### Minimum Viable Product (MVP): 
