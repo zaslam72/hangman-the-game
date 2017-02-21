@@ -35,8 +35,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# API Unwrapper 
 gem 'httparty'
-gem 'countdown'
+
+# Front-End CSS Framework
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 
 group :development, :test do

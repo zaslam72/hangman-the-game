@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
   end 
 
 # post method for creation of session (click log in)
+# finds user by username and authenticates to ensure password typed is password stored
   def create
     @user = User.find_by_username(params[:username])
     if @user && @user.authenticate(params[:password])

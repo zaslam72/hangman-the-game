@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # resources 
   resources :games, except: [:index]
-  resources :users
+  resources :users, except: [:edit, :update]
 
   # sign up routes
   get '/signup' => 'users#new'

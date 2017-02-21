@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
 # this method will check to see if there's a current_user present
 # returns user object 
-  def current_user # change current_user to get_current_user 
+  def current_user
     current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
