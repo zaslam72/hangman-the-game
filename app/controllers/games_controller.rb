@@ -98,11 +98,11 @@ private
 # I then randomly select one word from this array and return it as my response
   def get_word(difficulty)
     if difficulty <= 3 
-      @@easy_words.sample 
+      ApplicationController.sample_easy_words
     elsif difficulty >= 8
-      @@hard_words.sample 
+      ApplicationController.sample_hard_words
     else
-      @@medium_words.sample 
+      ApplicationController.sample_medium_words
     end 
   end 
 
