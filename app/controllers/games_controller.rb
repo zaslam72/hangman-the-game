@@ -5,7 +5,6 @@ class GamesController < ApplicationController
 
 # delimiter constant for API call 
 # called in get_word method below 
-  DELIMITER = "\n"
 
 # get method for new game
   def new
@@ -18,9 +17,9 @@ class GamesController < ApplicationController
 # redirects to game show if the game saves 
   def create
     if current_user
-      @game = current_user.games.new(word: get_word(params[:difficulty]), guesses: "", difficulty: params[:difficulty])
+      @game = current_user.games.new(word: get_word(params[:difficulty].to_i), guesses: "", difficulty: params[:difficulty])
     else 
-      @game = Game.new(word: get_word(params[:difficulty]), guesses: "", difficulty: params[:difficulty])
+      @game = Game.new(word: get_word(params[:difficulty].to_i), guesses: "", difficulty: params[:difficulty])
     end 
     # redirect_to game_path(@game) if @game.save
     if @game.save 
@@ -38,7 +37,7 @@ class GamesController < ApplicationController
     check_letter(params[:letter])
     respond_to do |format|
       format.js { render 'show' } 
-      format.html {render 'show' }  
+      format.html { render 'show' }  
     end 
   end 
 
@@ -98,10 +97,13 @@ private
 # I shuffle the array because the list is in alphabetical order (to increase probability of randomness)
 # I then randomly select one word from this array and return it as my response
   def get_word(difficulty)
-    url = "http://linkedin-reach.hagbpyjegb.us-west-2.elasticbeanstalk.com/words?difficulty=#{difficulty}&minLength=5"
-    @response = HTTParty.get(url).split(/#{DELIMITER}/).shuffle.sample
-    p @response
-    return @response
+    if difficulty <= 3 
+      @@easy_words.sample 
+    elsif difficulty >= 8
+      @@hard_words.sample 
+    else
+      @@medium_words.sample 
+    end 
   end 
 
 end
