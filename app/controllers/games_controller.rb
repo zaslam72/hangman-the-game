@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   after_action :add_win_count, only: [:update]
   after_action :add_lose_count, only: [:update]
 
-# get method for new game
+# get method that initializes new game
   def new
     @game = Game.new
   end
